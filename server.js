@@ -220,6 +220,10 @@ const processMessage = async (messageText) => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.post("/chat-bot", async (req, res) => {
   const userQuery = req.body.text;
   const response = await processMessage(userQuery);
