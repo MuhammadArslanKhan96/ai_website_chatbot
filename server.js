@@ -12,7 +12,6 @@ if (process.env.NODE_ENV !== "production") {
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(cors());
 const { WIT_AI_ACCESS_TOKEN, BRIAN_API_KEY } = process.env;
 // const COIN_GECKO_API_URL = 'https://api.coingecko.com/api/v3/simple/price';
 const _0x520456 = _0xd006;
@@ -179,6 +178,8 @@ const chatGPT = async (messageText) => {
   );
   4;
   const data = await response.json();
+  // console.log(data);
+  // return data;
   return data.choices[0].message.content;
 };
 
