@@ -44,6 +44,8 @@ app.post("/chat", async (req: express.Request, res: express.Response) => {
         ],
         model: model,
     });
+    //https://51.20.105.60.nip.io:3001/messages/create
+    //http://localhost:8080/messages/create
     await fetch("https://51.20.105.60.nip.io:3001/messages/create", {
         method: "POST",
         headers: {
@@ -55,6 +57,8 @@ app.post("/chat", async (req: express.Request, res: express.Response) => {
             user_id,
         }),
     });
+    //https://51.20.105.60.nip.io:3001/messages/create
+    //http://localhost:8080/messages/create
     await fetch("https://51.20.105.60.nip.io:3001/messages/create", {
         method: "POST",
         headers: {
